@@ -22,13 +22,13 @@ public class Utils {
 	}
 	
 	@FindBy(xpath="//a[contains(@href,'admin')]")
-	WebElement admin;
+	static WebElement admin;
 	
 	@FindBy(xpath="//a[contains(@href,'dashboard')]")
-	WebElement dashboard;
+	static WebElement dashboard;
 	
 	@FindBy(xpath="//a[contains(@href,'pim')]")
-	WebElement pim;
+	static WebElement pim;
 	
 	public String getURL() throws IOException {
 		
@@ -40,15 +40,15 @@ public class Utils {
 		
 	}
 	
-	public void goToDashboardPage() {
+	public static void goToDashboardPage() {
 		dashboard.click();		
 	}
 	
-	public void goToAdminPage() {
+	public static void goToAdminPage() {
 		admin.click();		
 	}
 	
-	public void goToPimPage() {
+	public static void goToPimPage() {
 		pim.click();		
 	}
 	

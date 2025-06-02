@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AdminPage;
 import pages.LandingDashboardPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class StepDefinitions {
 	
@@ -20,8 +21,12 @@ public class StepDefinitions {
 	
 	@Given("launch HRM application")
 	public void launch_HRM_Application() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\dell\\Desktop\\Eclipse workspace\\SDET Udemy\\OrangeHRM\\chromedriver\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\dell\\Desktop\\Eclipse workspace\\SDET Udemy\\OrangeHRM\\chromedriver\\chromedriver.exe");
+				//driver = new ChromeDriver();
+
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 	}
@@ -32,7 +37,7 @@ public void logged_in_with_username_and_password() throws IOException {
 	
 	lp = new LandingDashboardPage(driver);
 	lp.goToURL();
-	lp.loginToHrm("admin","admin123" );
+	lp.loginToHrm("Admin","admin123" );
 }
 
 
