@@ -38,7 +38,7 @@ public class ExcelReader {
 		return datareader.toArray(new Object[0][0]);
 		
 	}
-	
+	//to test the excel data populating or not
 	public static void main(String[] args) throws IOException {
 		 String path = System.getProperty("user.dir") + "\\src\\test\\resources\\Testdata excel files\\sample_employee_records.xlsx";
 		    Object[][] data = employeeData(path, "Sheet1");
