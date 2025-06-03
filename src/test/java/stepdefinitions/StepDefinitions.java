@@ -21,8 +21,6 @@ public class StepDefinitions {
 	
 	@Given("launch HRM application")
 	public void launch_HRM_Application() {
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\dell\\Desktop\\Eclipse workspace\\SDET Udemy\\OrangeHRM\\chromedriver\\chromedriver.exe");
-				//driver = new ChromeDriver();
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
