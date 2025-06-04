@@ -71,7 +71,7 @@ public LandingDashboardPage(WebDriver driver) {
 	
 	//Individual testing template
 	public static void main(String[] args) throws IOException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\dell\\Desktop\\Eclipse workspace\\SDET Udemy\\OrangeHRM\\chromedriver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
